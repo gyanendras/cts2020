@@ -16,9 +16,11 @@ public class FileIO {
 			  ("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myTest.txt");
 
 	OutputStream os = new FileOutputStream("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myOutput.txt");
-	  
-  while(is.read()!=-1) {
-	  os.write(is.read());
+	int i = 0; 
+	i=is.read();
+  while(i!=-1) {
+	  os.write(i);
+	  i=is.read();
 	  //System.out.println();
   }; 
   
