@@ -12,14 +12,16 @@ public class TestHashSet {
 		
 		System.out.println(p4.equals(p5));
 		
-		Set<Person> pSet = new TreeSet<>();
+		Set<Person> pSet = new HashSet<>();
 		pSet.add(p1);
 		pSet.add(p2);
 		pSet.add(p3);
 		pSet.add(p4);
 		pSet.add(p5);
 		
-		for(Person p:pSet) {
+		TreeSet<Person> ts = new TreeSet<>(pSet);
+		
+		for(Person p:ts) {
 			System.out.println(p);
 			
 		}
