@@ -10,19 +10,20 @@ import java.io.OutputStream;
 public class FileIO {
 
 	public static void main(String[] args) {
+		InputStream is = null;
+		OutputStream os = null;
+			try {
+					is = new FileInputStream
+							("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myTest.txt");
 
-  try {
-	InputStream is = new FileInputStream
-			  ("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myTest.txt");
-
-	OutputStream os = new FileOutputStream("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myOutput.txt");
-	int i = 0; 
-	i=is.read();
-  while(i!=-1) {
-	  os.write(i);
-	  i=is.read();
-	  //System.out.println();
-  }; 
+				 os = new FileOutputStream("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myOutput.txt");
+				int i = 0; 
+				i=is.read();
+			  while(i!=-1) {
+				  os.write(i);
+				  i=is.read();
+				  //System.out.println();
+			  }; 
   
   
   } catch (FileNotFoundException e) {
@@ -30,6 +31,15 @@ public class FileIO {
 } catch (IOException e) {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
+}finally {
+	try {
+		is.close();
+		os.close();
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
 }
 
 	}
