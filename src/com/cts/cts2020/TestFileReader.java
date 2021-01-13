@@ -16,20 +16,23 @@ public class TestFileReader {
 			Reader r1 = new FileReader(f);
 			int c = r.read();
 			while(c!=-1) {
-			System.out.print((char)c);
+			//System.out.print((char)c);
 			c = r.read();
 			}
 			
-			/*
-			BufferedReader br = new BufferedReader(r);
-						String line = br.readLine();
+			String p = null;
+			StringBuilder sb = new StringBuilder();
+			BufferedReader br = new BufferedReader(r1);
+			String line = br.readLine();
 			//System.out.println(line);
 			while(line!=null) {
-				System.out.println(line);
+				// p = p+line;
+				sb.append(line+"\n");
+				//System.out.println(line);
 				line = br.readLine();
 			}
-			*/
 			
+			System.out.println(sb);
 			
 		} catch (FileNotFoundException e) {
 					e.printStackTrace();
