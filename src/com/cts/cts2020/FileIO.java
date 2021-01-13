@@ -18,10 +18,11 @@ public class FileIO {
 
 				 os = new FileOutputStream("C:\\Users\\Gyan\\eclipse-workspace\\cts2020\\src\\myOutput.txt");
 				int i = 0; 
-				i=is.read();
+				byte[] b = new byte[20];
+				i=is.read(b);
 			  while(i!=-1) {
 				  os.write(i);
-				  i=is.read();
+				  i=is.read(b);
 				  //System.out.println();
 			  }; 
   
