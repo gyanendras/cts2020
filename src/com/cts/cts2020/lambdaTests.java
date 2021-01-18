@@ -64,6 +64,8 @@ public class lambdaTests {
 		
 		System.out.println("\n Collection "+ cList2);
 		
+		//Filter out all the cars that dont start with B
+		
 	}
 	
 	
