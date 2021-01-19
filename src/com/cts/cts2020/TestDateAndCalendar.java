@@ -46,6 +46,8 @@ public class TestDateAndCalendar {
 		sdf2.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
 		System.out.println(sdf2.format(c.getTime()));
 		
+		System.out.println(Thread.currentThread().getName());
+		
 	}
 
 }

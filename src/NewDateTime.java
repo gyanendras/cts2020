@@ -28,8 +28,8 @@ public class NewDateTime {
 		LocalDateTime localDtTime1 = LocalDateTime.of(1971,11,21,0,0,0);
 		LocalDateTime localDtTime2 = LocalDateTime.parse("2004-01-24T10:15:30");
 		
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd'T'hh:mm:ss");
-		// LocalDateTime localDtTime3 = LocalDateTime.parse("2004/01/24T01:12:24",dtf);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd-HH:mm:ss");
+		LocalDateTime localDtTime3 = LocalDateTime.parse("2004/01/24-01:12:24",dtf);
 		
 		LocalDate ld = LocalDate.now();
 		LocalTime lt = LocalTime.now();
