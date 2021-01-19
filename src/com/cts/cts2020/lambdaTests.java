@@ -2,6 +2,7 @@ package com.cts.cts2020;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
@@ -31,6 +32,13 @@ public class lambdaTests {
 			return pr1.getName() + " has a " + cr.getName();
 			
 		};
+		
+		BiFunction<Person,Car,String> bf = (Person pr1, Car cr)->{
+			return pr1.getName() + " has a " + cr.getName();
+		};
+		
+		
+		
 		Person p = new Person("Mohan","Keswani");
 		Car c = new Car("Honda");
 		
@@ -66,6 +74,10 @@ public class lambdaTests {
 		
 		//Filter out all the cars that dont start with B
 		
+		List<Person> ls = cList.stream().map(x->{return new Person("owner",x.getName());}).collect(Collectors.toList());
+		System.out.println(ls);
+		
+		System.out.println(bf.apply(pr2, c2));
 	}
 	
 	
