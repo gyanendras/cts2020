@@ -66,9 +66,9 @@ public class EmployeeDAO {
 	
 	//To do
 	// code getAllDepartments()
-	// get me all employees who lastname is "King", getEmployeesByLastName
+	// get me all employees who lastname is "King", getEmployeesByLastName()
 	// get me all emolyess whose lastname is "Cambrault" but use prepared statement
-	// getEmpByLnameParameterized
+	// getEmpByLnameParameterized() -- preparedstatement
 	// statement, preparedstatement, callableStatement;
 	
 	
