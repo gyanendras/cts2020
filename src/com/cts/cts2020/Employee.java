@@ -57,12 +57,12 @@ public class Employee {
 		
 	}
 	
-	private void setRetirementAge(int age) {
+	public void setRetirementAge(int age) {
 		retirementAge = age;
 		
 	}
 
-	private Integer getRetirementAge() {
+	public Integer getRetirementAge() {
 		return retirementAge;
 	}
 
@@ -71,18 +71,18 @@ public class Employee {
 		
 	}
 
-	private String getName() {
+	public String getName() {
 		return fname +" "+ lname;
 		
 		
 	}
 	
-	private void setName(String firstName, String lastName) {
+	public void setName(String firstName, String lastName) {
 		fname = firstName;
 		lname = lastName;
 	}
 	
-	private double calculateBonus() {
+	public double calculateBonus() {
 		return 5*salary/100+retirementAge/10;
 	}
   
