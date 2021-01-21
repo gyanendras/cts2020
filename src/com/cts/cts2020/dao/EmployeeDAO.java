@@ -64,7 +64,7 @@ public class EmployeeDAO {
 		
 	}
 	
-	//To do
+	//To do 
 	// code getAllDepartments()
 	// get me all employees who lastname is "King", getEmployeesByLastName()
 	// get me all emolyess whose lastname is "Cambrault" but use prepared statement
