@@ -28,6 +28,13 @@ class EmployeeDAOTest {
 		
 	}
 	
+	@Test
+	void testGetEmpByLname() {
+		EmployeeDAO empdao = new EmployeeDAO();
+		List<Employee> eList = empdao.getEmpByLname("Cambrault");
+		System.out.println(eList.get(0).getName());
+	}
+	
 	// write a test case for getAllDepartments
 
 }

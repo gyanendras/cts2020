@@ -2,6 +2,7 @@ package com.cts.cts2020.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,6 +12,7 @@ import java.util.List;
 import com.cts.cts2020.Employee;
 
 public class EmployeeDAO {
+
 	
 	public Connection getConnection(){
 		Connection con = null;
@@ -62,6 +64,34 @@ public class EmployeeDAO {
 		
 		return eList;
 		
+	}
+	
+	public List<Employee> getEmpByLname(String lname){
+		Connection con = getConnection();
+		Statement st = null;
+		List<Employee> eList = new ArrayList<>();
+		
+		String sql = "select * from employees e where e.last_name = ?"
+				+ "and department_id = ? ";
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1,lname); // "Cambrault"
+			ps.setInt(2, 80);
+			
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				Employee e = new Employee();
+				e.setName(rs.getString(2), rs.getString(3));
+				eList.add(e);
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
+		return eList;
 	}
 	
 	//To do 
