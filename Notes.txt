@@ -1,2 +1,14 @@
 Maven - Maven is a software to build a software project.
 It is primarily used to compile the project, add dependencies to it, manage versions, run tests, package code(in jar or war) and deploy it(save it to a location)
+
+Maven manages project lifecycle by convention, i.e it has a pre defined project structure to put code, resources and test etc.
+
+src-main
+     |_ java - All java files
+     |_ resources - all non java files
+     |_ test -- All test classes
+     
+ maven goals are project steps that we can execute using maven like clean, compile, test, package, deploy
+ and these goals are combined in one goal called install.
+ 
+     
