@@ -79,6 +79,9 @@ public class EmployeeDAO {
 			ps.setInt(2, 80);
 			
 			ResultSet rs = ps.executeQuery();
+			
+			
+			
 			while(rs.next()) {
 				Employee e = new Employee();
 				e.setName(rs.getString(2), rs.getString(3));
@@ -101,6 +104,17 @@ public class EmployeeDAO {
 	// getEmpByLnameParameterized() -- preparedstatement
 	// statement, preparedstatement, callableStatement;
 	
+	
+	// transaction - set of statements that 
+				// should rollback together or get committed to db together
+				/* try {
+				con.setAutoCommit(false);
+				ps2.executeUpdate();
+				ps3.executeUpdate();
+				con.commit();
+				}catch(Exception e) {
+					con.rollback();
+				}*/
 	
 
 }
