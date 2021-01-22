@@ -1,0 +1,2 @@
+Maven - Maven is a software to build a software project.
+It is primarily used to compile the project, add dependencies to it, manage versions, run tests, package code(in jar or war) and deploy it(save it to a location)

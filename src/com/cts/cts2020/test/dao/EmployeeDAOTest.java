@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.sql.Connection;
 import java.util.List;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.cts.cts2020.Employee;
@@ -16,7 +17,7 @@ class EmployeeDAOTest {
 	void testGetAllEmployees() {
 		EmployeeDAO empdao = new EmployeeDAO();
 		List<Employee> l = empdao.getAllEmployees();
-		assertEquals(116, l.size());
+		Assertions.assertEquals(116, l.size());
 	}
 	
 	@Test
